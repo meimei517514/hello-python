@@ -1,6 +1,6 @@
 # -*- coding: gbk -*-
 
-import os,time,datetime
+import os,time,datetime,re
 '''
 year_=2004
 month_=10
@@ -63,6 +63,17 @@ def update_file():
         print 'record.txt的人名字符合规定，不需要更新'
 
 
+def re_filename():
+    name='output_2000.12.1.txt'
+    math_=re.search(r'output_(?P<year>\d{,4}).(?P<month>\d{,2}).(?P<day>\d{,2}).txt',name)
+    timelist=map(lambda x:int(x),[math_.group('year'),math_.group('month'),math_.group('day')])
+    datetime2=datetime.datetime(*timelist)
+    seconds=datetime2-datetime.datetime(1970,1,1)
+    time_struct=time.localtime(seconds.total_seconds())
+    new_name=time.strftime('%Y-%m-%d-%w',time_struct)
+    print new_name
+
+
 
 if __name__=='__main__':
     tag_name=''
@@ -73,3 +84,4 @@ if __name__=='__main__':
     find_person()
     update_file()
 
+    re_filename()
