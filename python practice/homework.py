@@ -1,22 +1,20 @@
 # -*- coding: gbk -*-
 
 import os,time,datetime,re
-'''
-year_=2004
-month_=10
-day_=1
 
-if (year_%4==0 and year_%100!=0) or year_%400==0:
-    print "%d是闰年"%year_
-else:
-    print "%d不是闰年"%year_
+def jugle_time():
+    year_=2004
+    month_=10
+    day_=1
+
+    if (year_%4==0 and year_%100!=0) or year_%400==0:
+        print "%d是闰年"%year_
+    else:
+        print "%d不是闰年"%year_
+
+    print '2008.10.1是一年中的第%d天'%datetime.datetime(2008,10,1).timetuple().tm_yday
 
 
-seconds_=datetime.datetime(2008,10,1)-datetime.datetime(1970,1,1)
-print seconds_.total_seconds()
-print time.localtime(seconds_.total_seconds()).tm_yday
-
-'''
 def read_file():
     global person_record,tag_name,need_update
     file_=file('record.txt','r')
@@ -50,7 +48,6 @@ def update_file():
         return x
         
     person_record=map(capitalize,person_record)
-    print person_record,need_update
     if need_update==True:
         print 'record.txt有人的名字不符合规定，需要更新'
         file_=file('record.txt','w')
@@ -67,11 +64,9 @@ def re_filename():
     name='output_2000.12.1.txt'
     math_=re.search(r'output_(?P<year>\d{,4}).(?P<month>\d{,2}).(?P<day>\d{,2}).txt',name)
     timelist=map(lambda x:int(x),[math_.group('year'),math_.group('month'),math_.group('day')])
-    datetime2=datetime.datetime(*timelist)
-    seconds=datetime2-datetime.datetime(1970,1,1)
-    time_struct=time.localtime(seconds.total_seconds())
-    new_name=time.strftime('%Y-%m-%d-%w',time_struct)
-    print new_name
+    datetime_real=datetime.datetime(*timelist)
+    datetime_str=datetime_real.strftime('%Y.%m.%d')
+    print "文件改名后为%s.txt"%datetime_str
 
 
 
@@ -80,6 +75,7 @@ if __name__=='__main__':
     person_record=[]
     need_update=False
 
+    jugle_time()
     read_file()
     find_person()
     update_file()
