@@ -1,4 +1,4 @@
-from flask import Flask,request,abort,redirect
+from flask import Flask,request,abort,redirect,render_template
 
 app = Flask(__name__)
 app.debug = True
@@ -7,7 +7,7 @@ app.config["SECRET_KEY"] = "hard to guess"
 @app.route("/")
 def first_page():
 	header = request.headers.get("User-Agent")
-	return "hello,flask,this is %s" %header
+	return render_template("index.html")
 
 @app.route("/redirect")
 def redirect_page():
@@ -16,14 +16,16 @@ def redirect_page():
 
 @app.route("/user/<name>")
 def dynamic_page(name):
-	user_name = load_user(name)
+	print name
 	if not name:
 		abort(404)	
-	return "hello,%s,young man" %name
+	return render_template("name.html",name=name)
 
 @app.errorhandler(404)
 def error_page_define(e):
 	return "this is a define 404 page"
+
+
 
 
 if __name__ == "__main__":
