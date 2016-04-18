@@ -71,6 +71,15 @@ class bird(object):
 			self.pos=self.pos+1
 		else:
 			self.pos=self.pos+10
+	def getneg(self):
+		return -self.pos
+
+	def setneg(self,value):
+		self.pos=-value
+	def delneg(self):
+		del self.pos
+
+	negpos=property(getneg,setneg,delneg)
 
 bird1=bird("maque","walk")
 bird2=bird("xiaoji","fly")
@@ -81,6 +90,16 @@ bird2.move()
 print bird1.pos,bird2.pos
 print 1 or 0
 
+print "start"
+print bird1.negpos
+bird1.negpos=10
+print bird1.negpos,bird1.pos
+
+del bird1.negpos
+
+print bird1.negpos,bird1.pos
+
+print "END"
 
 class creature(bird):
 	category=1
@@ -159,3 +178,49 @@ else:
 finally:
 	print "thanks for watching"
 
+class fakelist(list):
+	def __init__(self,arg):
+		if type(arg)!= iter:
+			list(arg)
+		else:
+			print "arg must be iterable"
+
+
+class superlist(list):
+	def __sub__(self,subobj):
+		a=self[:]
+		b=subobj[:]
+		print a,b
+		return True
+noknown=superlist([2,4])
+print noknown	
+print superlist([1,2,4])-superlist([3,0,-1])
+
+
+class superList(list):
+    def __sub__(self, b):
+        a = self[:]    
+        b = b[:]        
+        print a,b
+	while len(b) > 0:
+            element_b = b.pop()
+            if element_b in a:
+                a.remove(element_b)
+        return a
+
+print superList([1,2,3]) - superList([3,4])
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
