@@ -1,9 +1,11 @@
-sdfaasdfsdfsdjkdsfasdflfasdf
-sdfaasdfsdfsdfasdf sdfaasdfsdfsdfasdf JDDsdfaasdfidsdfdsdfsdfasdf jdsaflk sdfaasdfisdfsdfasdf djflskdfjl JDDsdfaasdfisdx djflskdfjl
+jjjkdsfjasldfja
+
+OJJKSJDFLSKADJ
+    0sdfaasdfsdfsdfasdf sdfaasdfsdfsdfasdf JDDsdfaasdfidsdfsdfsdfasdf jdsaflk sdfaasdfisdfsdfasdf djflskdfjl JDDsdfaasdfisdx djflskdfjl      
+
+sdfaasdfsdfsdjkdsfiijjjiasdflfasdf
 O
 JKJKJKJKJ
-jjjjjjjjjjjjjjjjjjjjjjjjj jjjjjjjjjjjjjj dafsdfasdfda sdfdfsdfasdf 
-JKSDJFLASKDJ
 JJ
 JJ
 
@@ -15,7 +17,7 @@ jjjjjjjjjjjjjjjjjjjjjjjjj jjjjjjjjjjjjjj dafsdfasdfda sdfdfsdfasdf
 JKJKJKJKJ
 
 
-desudesudesudesudesudesudesudesudesudesuO
+desudesudesudesudesudesudesudesudesudessdfsd
 jjj
 JKJKJKJKJ
 JKJKJKJKJ
@@ -25,14 +27,18 @@ desudesudesudesudesudesudesudesudesudesdesudesudesudesudesudesudesudesudesudesuu
 JK
 
 JJKJKJKJKJKJKJKJKJ
-
+SDFAASDFISDFSDFASDD
+JJKJJKJdKJKJKJdKJ
 JJKJJKJdKJKJKJdKJ JKKJdKJKJKJdKJ JKJKJKJJKJJKJJ  JJJSDAFA sdfaasdfsdfsdfasdf sdfaasdfisdfsdfasdf djflskdfjl o jdskfjkjkljkjkk O JDDsdfaasdfisdfsdfasdf djflskdfjl sdfaasdfisdfsdfasdf Djflskd
     ,,,    *JKJKJKJ JKJKJKJKJ JJJSDAFA sdfaasdfsdfsdfasdf sdfaasdfisdfsdfasdf djflskdfjl o jdskfjkjkljkjkk O JDDsdfaasdfisdfsdfasdf djflskdfjl sdfaasdfisdfsdfasdf,djflskd             sdfas            ,,
 {JKJKJKJ {JKJKJKJKJ JJJSDAFA {}}JSDFAASDFSDFSDFASDF SDFAASDFISDFSDFASD[]F DJFLSKDFJL []O JDSKFJKJKLJKJKK O JDDSDFAASDFISDFSDFASDF DJFLSKDFJ()L SDFAASDFISDFSDFASDF DJFLSKD
 ()
 
-dsfskaljj
-desudesudesuadfsdafdflkjaadflksdjfsladk"
+alallsldkfjsldkfjsldkfjsdafkjsdlkjaljjjjj
+IIdsfskkkkkkkkaljjjjj
+$DJIIaljjjjj
+$IIaljj $IIaljj $IIaljj JJ $<aljjjjj
+aljj<desudesudesuadfsdafdflkjaadflksdjfsladk"jjj
 jjjjjjjjjjjjjjjjjjjffjl
 D--jjjjjjjjjjjjjjjjjjjffjla D--jjjjjjjjjjjjjjjjjjDAFDAFAAJFFJLF
 jjjjjjjjjjjjjjjjjjjjjjjj
@@ -68,4 +74,4 @@ def functest():
 			print i
 
 
-
+abcdefghijklmnopqrstuvwxyz 1234567890-=>,./;:''"{{[]()

@@ -1,0 +1,5 @@
+./vimempty.ext
+./vimpractice.py
+./filename.txt
+./vimnotemptyh.txt
+./.vimpractice.py.swp
