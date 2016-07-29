@@ -1,0 +1,18 @@
+
+div#one {
+	color:blue;
+	width:1000px;
+}
+
+div#two {
+	width:500px;
+
+}
+
+input#password {
+	type:password;
+}
+
+input#submit {
+	value:submit;
+}

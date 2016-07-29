@@ -41,7 +41,7 @@ def login():
 		return render_template("login.html")
 
 	else:
-		return "not difine yet"
+		return "weclome %s,you password is %s,have a niceday"%(request.form["name"],request.form["password"])	
 
 
 if __name__ == "__main__":
