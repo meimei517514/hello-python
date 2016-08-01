@@ -7,17 +7,25 @@
 	<title>{% block title %} {% endblock %}</title>
 	{% endblock %}
 
+	<link rel="stylesheet" type="text/css" href="static/css/index.css">
 	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<style type="text/css">
+		h1 { color:brown}
+	</style>
+
 </head>
 <body>
 	{% block body %} {% endblock %}
-	<h1> this is first page </h1>
+	<h1 style="color:fuchsia"> this is first page </h1>
 
 	<a href="/login"><button name="login">login</button></a>
 
 	<script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
 
-	<script src="js/bootstrap.min.js"></script
+	<script src="js/bootstrap.min.js"></script>
 
+	<h1 class="bird"> i am a bird </h1>
+	<p id="comment">comment: just for learning,do not use for commercial</p>
+	<p><h2> yes or<p>ha<h3 name="laugh">h3</h3>ha</p> no</h2></p>
 </body>
 </html>

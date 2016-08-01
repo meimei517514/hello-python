@@ -16,3 +16,46 @@ input#password {
 input#submit {
 	value:submit;
 }
+
+h1,h2,h3,h4,h5,h6,body {
+	color:red;
+	font-size:20px;
+}
+
+a button {
+	color:blue;
+	font-size:30px;
+}
+
+#comment {
+	color:pink;
+	font-size:10px;
+}
+
+.bird {
+	color:gray;
+	font-size:40px;
+	border:red;
+}
+
+h2 p{
+	color:black;
+	font-size:50px;
+	background-image:url('images/sample.png');
+	background-repeat:repeat-x;
+	/*width:1000px;
+	height:1000px;
+	*/
+	background-position:top;
+	border:red;
+}
+
+[name=laugh] {
+	color:aqua;
+	font-size:60px;
+	background-color:black;
+	padding:30px;
+}
+
+
+
