@@ -20,6 +20,11 @@ input#submit {
 h1,h2,h3,h4,h5,h6,body {
 	color:red;
 	font-size:20px;
+	font-family:serif;
+	font-style:normal;
+	font-weight:100;
+
+
 }
 
 a button {
@@ -30,6 +35,12 @@ a button {
 #comment {
 	color:pink;
 	font-size:10px;
+	text-indent:10px;
+	text-align:center;
+	word-spacing:10px;
+	letter-spacing:2px;
+	text-transform:capitalize;
+	text-decoration:blink;	
 }
 
 .bird {
@@ -58,4 +69,31 @@ h2 p{
 }
 
 
+[name=space] {
+	color:steelblue;
+	font-size:70px;
+	white-space:pre-line;
+
+}
+a {
+	text-decoration:none;
+	background-color:blue;
+}
+
+a.aspecial:link {
+	color:tan;
+}
+
+
+a.aspecial:visited {
+	color:tan
+}
+
+a.aspecial:hover {
+	color:thistle;
+}
+
+a.aspecial:active {
+	color:tomato;
+}
 
