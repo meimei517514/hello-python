@@ -96,4 +96,59 @@ a.aspecial:hover {
 a.aspecial:active {
 	color:tomato;
 }
+ 
+ul {
+	width:500px;
+	border:1px solid pink;
+	list-style-type:square;
+	list-style-image:url('images/sidample.png');
+	list-style-position:inside;
+	/*outline-style:solid;
+	outline-width:5px;
+	outline-color:tan;
+	*/
+	padding:100px 1px 30px 10px;
+	margin:10% 10% 20% 10%;
+}
 
+table {
+	border:5px solid;
+	width:100%;
+	border-color:tomato;
+	border-collapse:collapse;
+}
+
+caption { 
+	text-align:center;
+	color:black;
+	background-color:green;
+}
+th { 
+	text-align:center;
+	color:black;
+	background-color:gray;
+	border:5px solid tomato;
+
+}
+
+tr.tan {
+	background-color:tan;
+	border:5px solid tomato;
+
+}
+
+tr.pink {
+	background-color:pink;
+	border:5px solid tomato;
+
+}
+
+td {
+	border:5px solid tomato;
+}
+
+p.border {
+	border-color:tan pink blue black;
+	border-style:solid dotted dashed double;
+	border-width:5px 10px 20px 30px;
+}
