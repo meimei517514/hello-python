@@ -150,5 +150,53 @@ td {
 p.border {
 	border-color:tan pink blue black;
 	border-style:solid dotted dashed double;
-	border-width:5px 10px 20px 30px;
+	border-width:5px 5px 10px 5px;
+	margin:10px 10px 10px 10px;
 }
+
+p.relative {
+	position:relative;
+	left:10px;
+	bottom:20px;
+	border:5px solid tan;
+	width:1000px;
+}
+
+p.absolute {
+	position:absolute;
+	right:50px;
+	bottom:10px;
+	border:5px solid pink;
+	z-index:-1;
+}
+
+p.overflow {
+	width:100px;
+	height:50px;
+	overflow:auto;
+	background-color:tomato;
+}
+
+img {
+	vertical-align:text-top;
+	float:right
+}
+
+div.fit {
+	background-color:tan;
+	width:200px;
+	height:100px;
+	border:5px solid pink;
+	float:left;
+}
+
+
+div.float {
+	background-color:green;
+	width:200px;
+	height:50px;
+	border:5px solid blue;
+	overflow:auto;
+	float:left;
+}
+	

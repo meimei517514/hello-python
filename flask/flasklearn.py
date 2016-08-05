@@ -43,6 +43,9 @@ def login():
 	else:
 		return "weclome %s,you password is %s,have a niceday"%(request.form["name"],request.form["password"])	
 
+@app.route("/float")
+def folat():
+	return render_template("float.html")
 
 if __name__ == "__main__":
 	app.run()
