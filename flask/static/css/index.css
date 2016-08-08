@@ -177,11 +177,6 @@ p.overflow {
 	background-color:tomato;
 }
 
-img {
-	vertical-align:text-top;
-	float:right
-}
-
 div.fit {
 	background-color:tan;
 	width:200px;
@@ -200,3 +195,31 @@ div.float {
 	float:left;
 }
 	
+p.float {
+	border:5px solid tan;
+	width:500px;
+	height:1000px;
+	float:left;
+	border-collapse:collapse;
+}
+
+img.two {
+	width:500px;
+	height:800px;
+	vertical-align:text-top;
+	float:left;
+	border:5px solid pink;
+	clear:right;
+
+}
+
+img.one {
+	width:500px;
+	height:800px;
+	vertical-align:text-top;
+	float:left;
+	border:5px solid pink;
+
+}
+
+
