@@ -25,6 +25,8 @@ h1,h2,h3,h4,h5,h6,body {
 	font-weight:100;
 
 
+
+
 }
 
 a button {
@@ -200,7 +202,7 @@ p.float {
 	width:500px;
 	height:1000px;
 	float:left;
-	border-collapse:collapse;
+	/*	border-collapse:collapse;*/
 }
 
 img.two {
@@ -222,4 +224,18 @@ img.one {
 
 }
 
+table.float {
+	border:5px solid steelblue;
+	border-collapse:collapse;
+}
 
+p.header {
+	background-color:#0767c8;
+	width:100%;
+	height:40px;
+	position:fixed;
+	left:0;
+	top:0;
+	line-height:40px;
+	margin:0px; 
+}

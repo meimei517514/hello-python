@@ -47,5 +47,10 @@ def login():
 def folat():
 	return render_template("float.html")
 
+@app.route("/header")
+def header():
+	return render_template("header.html")
+
+
 if __name__ == "__main__":
 	app.run()
