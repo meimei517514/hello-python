@@ -67,5 +67,16 @@ p[game][name] {
 	padding:10px 0 20px 0px;
 }
 
+p.son > a.son {
+	color:blue;
+	text-decoration:none;
+}
+
+div.son {
+	float:left;
+}
 	
+p:first-child {
+	background-color:tan;
+}
 
