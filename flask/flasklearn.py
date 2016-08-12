@@ -55,7 +55,9 @@ def header():
 def borderimage():
 	return render_template("borderimage.html")
 
-
+@app.route("/script")
+def script():
+	return render_template("script.html")
 
 if __name__ == "__main__":
 	app.run()

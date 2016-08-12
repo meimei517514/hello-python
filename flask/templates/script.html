@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<meta name="keywords" content="html,css,python"/>
+<meta name="description" content="learning html & python"/>
+<html xmlns="http://www.baidu.com">
+<head>
+	<link rel="stylesheet" type="text/css" href="static/css/header.css">
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<script>
+		document.write("<h1>hello beautiful! this is headscript speaking</h1>");
+		/*
+		this is some kind of announcement
+		*/
+		// still announcement
+		var times=0;
+		var goodname=["a","b","c"];
+		var goodday={"a":1,"b":2,"c":3}
+		function cliptochange() {
+			document.getElementById("firstp").innerHTML="hello there";
+			document.getElementById("firsth2").innerHTML="hello there";
+			times=times+1;
+		}
+
+		function cliptolost() {
+			document.getElementById("firstp").innerHTML="hellow there2";	
+	  		//document.write("holly cow,you are lost");
+			times=times+2;
+		}
+
+		function cliptosummary() {
+			for(i=1;i<=times;i++) {
+				document.getElementById("times").innerHTML="you have clip:"+i+" times";	
+				setTimeout(function(){}, 1000);
+			}
+		}
+
+		function cliptoprint() {
+			for(i=0;i<goodname.length;i++) {
+				document.write(i+goodname[i]);
+			}
+			document.write("<br/>")
+			document.write(goodday.a,goodday["c"])
+		}
+	</script>
+</head>
+<body>
+	<p id="firstp">waiting for input</p>
+	<button onclick=cliptochange()>go</button>
+	<button onclick=cliptolost()>die</button>
+	<button onclick=cliptosummary()>see</button>
+	<button onclick=cliptoprint()>print</button>
+
+
+
+	
+    <p id="times">you have clip:0 times</p>
+	<script>
+		document.write("<h2 id='firsth2'>damn you i am tailscript!</h2>")
+	</script>
+</body>
+</html>
