@@ -71,12 +71,52 @@ p.son > a.son {
 	color:blue;
 	text-decoration:none;
 }
-
-div.son {
-	float:left;
-}
 	
-p:first-child {
+
+
+a.red:link {
+	color:blue;
+	font-size:50px;
+}
+
+a.red:visited {
+	color:green;
+	font-size:50px;
+}
+
+
+a.red:hover {
+	color:yellow;
+	font-size:50px;
+}
+
+
+
+a.red:active {
+	color:tan;
+	font-size:50px;
+}
+
+a:first-child {
 	background-color:tan;
 }
 
+p:lang(no) {
+ 	background-color:tan;
+	border:5px solid black;
+	border-radius:50px;
+	box-shadow:10px 10px 3px gray;
+}
+
+div.nto {
+	border-image:url('images/border.png') 30 30 round;
+	-moz-border-image:url('images/border.png') 30 30 round;
+	border:10px solid black;
+	position:relative;
+	left:0px;
+	top:50px;
+	width:100px;
+}
+p.textwrap {
+	word-wrap:break-word;
+}

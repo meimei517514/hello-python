@@ -51,6 +51,11 @@ def folat():
 def header():
 	return render_template("header.html")
 
+@app.route("/borderimage")
+def borderimage():
+	return render_template("borderimage.html")
+
+
 
 if __name__ == "__main__":
 	app.run()
