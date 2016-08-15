@@ -14,6 +14,9 @@
 		var times=0;
 		var goodname=["a","b","c"];
 		var goodday={"a":1,"b":2,"c":3}
+		goodname[3]="d"
+		goodday.a=0
+		goodday.d=4
 		function cliptochange() {
 			document.getElementById("firstp").innerHTML="hello there";
 			document.getElementById("firsth2").innerHTML="hello there";
@@ -21,25 +24,60 @@
 		}
 
 		function cliptolost() {
-			document.getElementById("firstp").innerHTML="hellow there2";	
+			document.getElementById("firstp").innerHTML="hellow there2".toUpperCase();	
 	  		//document.write("holly cow,you are lost");
 			times=times+2;
 		}
 
 		function cliptosummary() {
+			var result="";
 			for(i=1;i<=times;i++) {
 				document.getElementById("times").innerHTML="you have clip:"+i+" times";	
 				setTimeout(function(){}, 1000);
 			}
+			for( i in goodday) {
+				result=result+i+goodday[i];	
+			}
+			document.getElementById("times").innerHTML=result;	
+				
 		}
 
-		function cliptoprint() {
+		function cliptoprint(jonn) {
+			var globalvar="hi there";
 			for(i=0;i<goodname.length;i++) {
 				document.write(i+goodname[i]);
 			}
-			document.write("<br/>")
-			document.write(goodday.a,goodday["c"])
+			document.write("<br/>");
+			document.write(goodday.a,goodday["c"]," good day, "+jonn);
+			return globalvar;
 		}
+		var globalvar=cliptoprint();
+		//document.getElementById("firsth2").innerHTML=golbalvar;
+		document.write(globalvar);
+
+		function cliptoequal(numberb) {
+			if(numberb==5)
+				document.getElementById("number").innerHTML="naive";
+				if(numberb===5)
+					document.getElementById("number").innerHTML="good job";
+		/*	else
+				document.getElementById("number").innerHTML=(numberb==5);*/
+			switch(numberb)	{
+				case 0:
+					document.getElementById("number").innerHTML="one";
+				case 1:
+					document.getElementById("number").innerHTML="two";
+				case 2:
+					document.getElementById("number").innerHTML="three";
+				case 4:
+					document.getElementById("number").innerHTML="four";
+				default:
+					document.getElementById("number").innerHTML="default";
+			}				
+		}
+				
+			
+			
 	</script>
 </head>
 <body>
@@ -47,7 +85,8 @@
 	<button onclick=cliptochange()>go</button>
 	<button onclick=cliptolost()>die</button>
 	<button onclick=cliptosummary()>see</button>
-	<button onclick=cliptoprint()>print</button>
+	<button onclick=cliptoprint("jonn")>print</button>
+	<button onclick=cliptoequal("5")>equal</button>
 
 
 
@@ -55,6 +94,7 @@
     <p id="times">you have clip:0 times</p>
 	<script>
 		document.write("<h2 id='firsth2'>damn you i am tailscript!</h2>")
+		document.write("<h2 id='number'>how do you do</h2>")
 	</script>
 </body>
 </html>
