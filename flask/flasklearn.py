@@ -59,5 +59,10 @@ def borderimage():
 def script():
 	return render_template("script.html")
 
+@app.route("/transform")
+def transform():
+	return render_template("transform.html")
+
+
 if __name__ == "__main__":
 	app.run()
