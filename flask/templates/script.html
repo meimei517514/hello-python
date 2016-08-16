@@ -4,7 +4,7 @@
 <html xmlns="http://www.baidu.com">
 <head>
 	<link rel="stylesheet" type="text/css" href="static/css/header.css">
-	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/bootstrap.min.css" type="text/css" rel="stylesheet">
 	<script>
 		document.write("<h1>hello beautiful! this is headscript speaking</h1>");
 		/*
@@ -75,7 +75,19 @@
 					document.getElementById("number").innerHTML="default";
 			}				
 		}
-				
+		function cliptocatch() {
+			try {
+				var catchresult=document.getElementById("hodor").value;
+				if (catchresult=="") throw "value not found";
+				if (isNaN(catchresult)) throw "value not number";	
+				if (catchresult>10) throw "value 0";
+				else throw "value noway";
+			}
+			catch(err) {
+				var presult=document.getElementById("firstp");
+				presult.innerHTML=err;
+			}
+		}
 			
 			
 	</script>
@@ -87,6 +99,8 @@
 	<button onclick=cliptosummary()>see</button>
 	<button onclick=cliptoprint("jonn")>print</button>
 	<button onclick=cliptoequal("5")>equal</button>
+	<input id="hodor"/> 
+	<button type="button" onclick=cliptocatch()>catch</button> 
 
 
 

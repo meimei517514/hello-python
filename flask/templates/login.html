@@ -1,12 +1,25 @@
 <!DOCTYPE html>
 <html>
 <head>
-
+	<script>
+		function judgment(account,errtext) {
+			with(account) {
+				if(account==""||account==null) {alert(errtext);return false;}
+				else {return True;}
+			}
+		}
+		function valify(thisform) {
+			with(thisform) {	
+				if(account==""||account==null) {alert(errtext);return false;}
+				else {return True;}
+			}
+		}
+	</script>
 </head>
 
 <body>
-	<form action="/login" method="post">
-	name:<input name="name"> </input>
+	<form action="/login" onsubmit="return valify(this)" method="post">
+	name:<input name="account"> </input>
 		<br/>
 	password:<input name="password"> </input>	
 

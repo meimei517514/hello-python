@@ -41,7 +41,7 @@ def login():
 		return render_template("login.html")
 
 	else:
-		return "weclome %s,you password is %s,have a niceday"%(request.form["name"],request.form["password"])	
+		return "weclome %s,you password is %s,have a niceday"%(request.form["account"],request.form["password"])	
 
 @app.route("/float")
 def folat():
