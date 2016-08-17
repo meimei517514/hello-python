@@ -63,6 +63,11 @@ def script():
 def transform():
 	return render_template("transform.html")
 
+@app.route("/login2")
+def login2():
+	return render_template("login2.html")
+
+
 
 if __name__ == "__main__":
 	app.run()

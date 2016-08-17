@@ -88,24 +88,70 @@
 				presult.innerHTML=err;
 			}
 		}
+		
+		function cliptochange() {
+			var change=document.getElementById("hodor");
+			change.value=change.value.toUpperCase();
+			change.style.background="white";
+		}
+
+		function cliptoimg() {
+			var img=document.getElementsByTagName("img");
+			img[1].src="static/css/images/flower.gif";
+			var img2=document.getElementsByName("sample");
+		    //img2=img2.getElementsByName("sample");
+			img2[0].src="static/css/images/border.png";
+			img2[0].style.width="200px";
+			var number1=document.getElementById("number");
+			number1.style.visibility="hidden";
+		}
+		var mouse=document.getElementById("firstp");
+		//mouse.onmouseover=mouseevent() {cliptomouseevent()};
+		function cliptomouseevent() {
+			document.getElementById("firstp").innerHTML="hello there";
 			
+		}
+		
+		function checkload() {
+			alert("welcome");
+		}
+		//is seems chrome don't support onunload
+		function checkunload() {
+			alert("don't leave me please");
+		}
+
+		function cliptochild() {
+			var newchild=document.createElement("p");
+			text=document.createTextNode("yeah i am new born p");
+			newchild.appendChild(text);
+
+			var body=document.getElementsByTagName("body");
+			body[0].appendChild(newchild);
+			
+			var oldchild=document.getElementById("firsth2");
+			oldchild.parentNode.removeChild(oldchild);
+		}
 			
 	</script>
 </head>
-<body>
+<body onload="checkload()" onunload="checkunload()">
 	<p id="firstp">waiting for input</p>
 	<button onclick=cliptochange()>go</button>
 	<button onclick=cliptolost()>die</button>
 	<button onclick=cliptosummary()>see</button>
 	<button onclick=cliptoprint("jonn")>print</button>
 	<button onclick=cliptoequal("5")>equal</button>
-	<input id="hodor"/> 
+	<button onclick=cliptoimg()>img</button>
+	<button onclick=cliptochild()>child</button>
+	<input id="hodor" onchange="cliptochange()" onfocus="this.style.background='tan'"/> 
 	<button type="button" onclick=cliptocatch()>catch</button> 
-
-
+	<button onclick='this.innerHTML="bitch"'>clip</button>
+	<button id="mouseevent" onclick="cliptomouseevent()" onmousedown="this.innerHTML='clicking'" onmouseup="this.innerHTML='finish'">mouseevent</button>
 
 	
-    <p id="times">you have clip:0 times</p>
+    <p id="times" onmouseover="this.style.color='blue'" onmouseout="this.style.color='tan'">you have clip:0 times</p>
+	<img name="sample" src="static/css/images/sample.png" style="width:100px"><br/>
+	<img class="border" src="static/css/images/border.png">
 	<script>
 		document.write("<h2 id='firsth2'>damn you i am tailscript!</h2>")
 		document.write("<h2 id='number'>how do you do</h2>")

@@ -1,31 +1,31 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<script>
-		function judgment(account,errtext) {
-			with(account) {
-				if(account==""||account==null) {alert(errtext);return false;}
-				else {return True;}
-			}
-		}
-		function valify(thisform) {
-			with(thisform) {	
-				if(account==""||account==null) {alert(errtext);return false;}
-				else {return True;}
-			}
-		}
-	</script>
+<script>
+function judgment(account,alerttxt) {
+	with(account) {
+		if (value==null||value=="")
+	    	{alert(alerttxt);return false}
+    	else {return true}
+	}
+}
+function validate(thisform) {
+	with(thisform) {	
+		if (judgment(account,"account must be filled out!")==false)
+			{account.focus();return false}
+		if (judgment(password,"password must be filled out!")==false)
+			{password.focus();return false}
+	}
+}
+</script>
 </head>
 
 <body>
-	<form action="/login" onsubmit="return valify(this)" method="post">
-	name:<input name="account"> </input>
-		<br/>
-	password:<input name="password"> </input>	
-
-    <input type="submit" value="submit youself"></input>
+	<form action="/login" onsubmit="return validate(this)" method="post">
+	name:<input name="account"><br/>
+	password:<input name="password">
+    <input type="submit" value="submit youself">
 	</form>
-
 
 </body>
 
