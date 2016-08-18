@@ -105,16 +105,32 @@
 			var number1=document.getElementById("number");
 			number1.style.visibility="hidden";
 		}
-		var mouse=document.getElementById("firstp");
-		//mouse.onmouseover=mouseevent() {cliptomouseevent()};
 		function cliptomouseevent() {
 			document.getElementById("firstp").innerHTML="hello there";
 			
 		}
 		
 		function checkload() {
-			alert("welcome");
+			var today=new Date();
+			var hour=today.getHours();
+			var min=today.getMinutes();
+			var sec=today.getSeconds();
+			hour=checktime(hour);
+			min=checktime(min);
+			sec=checktime(sec);
+
+			var present=hour+":"+min+":"+sec;
+			document.getElementById("clock").innerHTML=present;
+
+			t=setTimeout('checkload()',500);
+		
 		}
+
+		function checktime(para) {
+			if (para<10) {para="0"+para;}
+			return para;
+		}
+
 		//is seems chrome don't support onunload
 		function checkunload() {
 			alert("don't leave me please");
@@ -131,7 +147,20 @@
 			var oldchild=document.getElementById("firsth2");
 			oldchild.parentNode.removeChild(oldchild);
 		}
-			
+
+		function cliptonewobject() {
+			var scription=new Object();
+			scription.head="hi,there ";
+			scription.mid="i am new ";
+			scription.tail="nice to meet you";
+			document.getElementById("object").innerHTML=scription.head+scription.mid+scription.tail;
+		}
+		
+		function person(para1,para2,para3) {
+			this.head=para1;
+			this.mid=para2;
+			this.tail=para3;
+		}
 	</script>
 </head>
 <body onload="checkload()" onunload="checkunload()">
@@ -147,14 +176,49 @@
 	<button type="button" onclick=cliptocatch()>catch</button> 
 	<button onclick='this.innerHTML="bitch"'>clip</button>
 	<button id="mouseevent" onclick="cliptomouseevent()" onmousedown="this.innerHTML='clicking'" onmouseup="this.innerHTML='finish'">mouseevent</button>
+	<button onclick=cliptonewobject()>newobject</button>
+	<button onclick=stringrelate()>newstring</button>
 
 	
     <p id="times" onmouseover="this.style.color='blue'" onmouseout="this.style.color='tan'">you have clip:0 times</p>
 	<img name="sample" src="static/css/images/sample.png" style="width:100px"><br/>
 	<img class="border" src="static/css/images/border.png">
+	<p id="object"></p>
+	<p id="stringsample"></p>
+	<p id="timesample" onmouseover=timerelate()></p>
+	<p id="clock"></p>
 	<script>
 		document.write("<h2 id='firsth2'>damn you i am tailscript!</h2>")
 		document.write("<h2 id='number'>how do you do</h2>")
+		var mouse=document.getElementById("firstp");
+		//mouse.onmouseover=levent() {cliptomouseevent();};
+		
+		//should be here,if in head."object" is still no define when execute
+		var boy=new person("hi func","there","bye");
+		boy.bye="bye";
+
+		boy.changename=changename;
+
+		function changename(name) {
+			this.head=name;
+		}
+
+		boy.changename("there there");
+		document.getElementById("object").innerHTML=boy.head+boy.mid+boy.tail+boy.bye;
+		function stringrelate() {
+			var sample="hello baby";
+			lengths=sample.length;
+			indexofb=sample.indexOf("b");
+			matching=sample.match("Baby");
+			document.getElementById("stringsample").innerHTML=lengths+" "+indexofb+" "+matching;
+		}
+		function timerelate() {
+			var sampletime=new Date();
+			document.getElementById("timesample").innerHTML=sampletime.getTime();
+		}	
+		
+		
+	
 	</script>
 </body>
 </html>
