@@ -178,6 +178,7 @@
 	<button id="mouseevent" onclick="cliptomouseevent()" onmousedown="this.innerHTML='clicking'" onmouseup="this.innerHTML='finish'">mouseevent</button>
 	<button onclick=cliptonewobject()>newobject</button>
 	<button onclick=stringrelate()>newstring</button>
+	<button onclick=arrayrelate()>array</button>
 
 	
     <p id="times" onmouseover="this.style.color='blue'" onmouseout="this.style.color='tan'">you have clip:0 times</p>
@@ -187,6 +188,7 @@
 	<p id="stringsample"></p>
 	<p id="timesample" onmouseover=timerelate()></p>
 	<p id="clock"></p>
+	<p id="array"></p>
 	<script>
 		document.write("<h2 id='firsth2'>damn you i am tailscript!</h2>")
 		document.write("<h2 id='number'>how do you do</h2>")
@@ -217,6 +219,16 @@
 			document.getElementById("timesample").innerHTML=sampletime.getTime();
 		}	
 		
+		function arrayrelate() {
+			var arraysample=new Array(3);
+			arraysample[0]="hi";
+			arraysample[1]="i am array";
+			arraysample[2]="tail";
+			arraysample[3]="try";
+
+			document.getElementById("array").innerHTML=arraysample[0]+arraysample[1]+arraysample[2]+arraysample[3];
+		}
+
 		
 	
 	</script>
