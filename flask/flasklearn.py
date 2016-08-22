@@ -67,6 +67,11 @@ def transform():
 def login2():
 	return render_template("login2.html")
 
+@app.route("/jqsample")
+def jqsample():
+	return render_template("jqsample.html")
+
+
 
 
 if __name__ == "__main__":
