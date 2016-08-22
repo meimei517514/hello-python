@@ -15,18 +15,59 @@ function validate(thisform) {
 			{account.focus();return false}
 		if (judgment(password,"password must be filled out!")==false)
 			{password.focus();return false}
+		var username=document.getElementById("account").value;
+		var password=document.getElementById("password").value;
+		setcookie(username,password,10000);
 	}
 }
+
+function setcookie(name,value,expiretime) {
+	var end=new Date();
+	end.setTime(end.getTime()+expiretime);
+	var expire="expires="+end.toUTCString();
+	document.cookie=name+"="+value+";"+expire;
+	alert("set cookie succeed "+name+value+expire);
+}
+
+function delcookie(name) {
+	setcookie(name,"",-1)
+	//document.cookie="";
+}
+
+function getCookie(name)
+{
+	var reg=new RegExp(name);
+
+	if(reg.test(document.cookie))
+		return (name);
+	else
+		return null;
+}
+
+function checkcookie() {
+	var user=getCookie("bill");
+	if (user) {alert("welcome again,"+user);}
+	else {alert("please register first");}
+}
+
+function getallcookie() {
+	var allcookie=document.cookie;
+	if (allcookie=="") alert("no cookies");
+	else alert(allcookie);
+}
+	
+
 </script>
 </head>
 
-<body>
+<body onload=checkcookie()>
 	<form action="/login" onsubmit="return validate(this)" method="post">
-	name:<input name="account"><br/>
-	password:<input name="password">
-    <input type="submit" value="submit youself">
+	name:<input name="account" id="account" style="margin:0 0 0 34px"><br/>
+	password:<input name="password" id="password">
+    <br/> <input type="submit" value="submit youself">
 	</form>
-
+	<button onclick=getallcookie()>getallcookie</button>
+	<button onclick=delcookie("bill")>del bill's cookie</button>
 </body>
 
 

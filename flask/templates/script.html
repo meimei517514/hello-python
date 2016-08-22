@@ -109,8 +109,8 @@
 			document.getElementById("firstp").innerHTML="hello there";
 			
 		}
-		
-		function checkload() {
+		var t;	
+		function clockstart() {
 			var today=new Date();
 			var hour=today.getHours();
 			var min=today.getMinutes();
@@ -122,7 +122,7 @@
 			var present=hour+":"+min+":"+sec;
 			document.getElementById("clock").innerHTML=present;
 
-			t=setTimeout('checkload()',500);
+			t=setTimeout('clockstart()',500);
 		
 		}
 
@@ -130,11 +130,22 @@
 			if (para<10) {para="0"+para;}
 			return para;
 		}
+		
+		function clockend() {
+			clearTimeout(t);
+			document.getElementById("clock").innerHTML="clock have stop";
+		}
+
 
 		//is seems chrome don't support onunload
+		function checkload() {
+			alert("welcome young man");
+		}
+		
 		function checkunload() {
 			alert("don't leave me please");
 		}
+		
 
 		function cliptochild() {
 			var newchild=document.createElement("p");
@@ -188,7 +199,26 @@
 	<p id="stringsample"></p>
 	<p id="timesample" onmouseover=timerelate()></p>
 	<p id="clock"></p>
+	<button onclick=clockstart()>clockstart</button>
+	<button onclick=clockend()>clockstop</button>
 	<p id="array"></p>
+	<p id="regular"></p>
+	<p id="regular2"></p>
+	<p id="regular3"></p>
+	<button onclick=regularrelate()>regular</button>
+	<p id="window"></p>
+	<button onclick=windowrelate()>window</button>
+	<p id="screen"></p>
+	<button onclick=windowrelate()>screen</button>
+	<p id="location"></p>
+	<button onclick=locationrelate()>location</button>
+	<button onclick=alertrelate()>alert</button>
+	<p id="alert"></p>
+	
+
+
+	
+
 	<script>
 		document.write("<h2 id='firsth2'>damn you i am tailscript!</h2>")
 		document.write("<h2 id='number'>how do you do</h2>")
@@ -229,7 +259,55 @@
 			document.getElementById("array").innerHTML=arraysample[0]+arraysample[1]+arraysample[2]+arraysample[3];
 		}
 
+		function regularrelate() {
+			var regularsample=new RegExp("haha");
+			document.getElementById("regular").innerHTML=regularsample.test("yeah hahaha");
+			var result="find it";
+			if (regularsample.exec("no no no")==null) {result="no found";}
+			document.getElementById("regular2").innerHTML=result;
+			regularsample.compile("no");
+			document.getElementById("regular3").innerHTML=regularsample.exec("no no no");
+		}
+
+		function windowrelate() {
+		 	var heightsample=window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+			var widthsample=window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+			document.getElementById("window").innerHTML="window's size is "+heightsample+","+widthsample;
+			//window.resizeTo(500,900);
+			window.close();	
+			//window.open();
+			var availwidth=screen.availWidth;
+			var availheight=screen.availHeight;	
+			document.getElementById("screen").innerHTML="screenavail's size is "+availheight+","+availwidth;
+		}
+
+		function locationrelate() {
+			var host=location.hostname;
+			var port=location.port;
+			var pathname=location.pathname;
+			var protocol=location.protocol;
+			var href=location.href;
+			document.getElementById("location").innerHTML="host:"+host+"<br/>port:"+port+"<br/>pathname:"+pathname+"<br/>protocol:"+protocol+"<br/>href:"+href;
+			window.location.assign("/login");
+			history.back();
+			//history.forward();
+
+		}
 		
+		function alertrelate() {
+			var r=confirm("press something");
+			if (r==true) 
+				{	
+					var name=prompt("hahaha \n yeah","enter your name");
+					if (name=="" || null) 
+						{
+							document.getElementById("alert").innerHTML="please enter your name";
+						}
+					else { document.getElementById("alert").innerHTML="welcome "+name+" you have a nice day";
+					}
+				}
+			else { alert("nooooooooo");}
+		}
 	
 	</script>
 </body>
