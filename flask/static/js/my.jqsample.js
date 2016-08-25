@@ -187,6 +187,45 @@ $(document).ready(function() {
 		$("li").find("*").css({"color":"red","border":"5px solid red"});
 	});
 
+	$("button.siblings").click(function() {
+		$("ol").siblings().css({"color":"red","border":"5px solid red"});
+	});
+
+	$("button.next").click(function() {
+		$("div p.travel").next().css({"color":"red","border":"5px solid red"});
+		alert($("div p.inli").next().css({"color":"red","border":"5px solid red"}));
+			
+	});
+
+	$("button.nextall").click(function() {
+		$("div p.travel").nextAll().css({"color":"red","border":"5px solid red"});
+	});
+
+
+	$("button.nextuntil").click(function() {
+		$("div p.travel").nextUntil("p").css({"color":"red","border":"5px solid red"});
+	});
+
+	$("button.equ").click(function() {
+		$("div p.travel").equ(1).css({"color":"red","border":"5px solid red"});
+	});
+
+	$("button.filter").click(function() {
+		$("div p.travel").nextAll().filter("p").css({"color":"red","border":"5px solid red"});
+	});
+
+	$("button.not").click(function() {
+		$("div p.travel").nextAll().not("p").css({"color":"red","border":"5px solid red"});
+	});
+
+	$("button.first").click(function() {
+		$("ol li").children().first().css({"color":"red","border":"5px solid red"});
+	});
+
+	$("button.ajsample").click(function() {
+		$("div.ajsample").load("static/file/ajfile.txt");
+	});
+
 
 
 

@@ -71,6 +71,10 @@ def login2():
 def jqsample():
 	return render_template("jqsample.html")
 
+@app.route("/ajsample")
+def ajsample():
+	return render_template("ajsample.html")
+
 
 
 
