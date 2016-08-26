@@ -75,6 +75,10 @@ def jqsample():
 def ajsample():
 	return render_template("ajsample.html")
 
+@app.route("/ajpost")
+def ajpost():	
+	return "weclome %s,you password is %s,have a niceday"%(request.form["name"],request.form["password"])	
+
 
 
 

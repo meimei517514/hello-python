@@ -223,8 +223,29 @@ $(document).ready(function() {
 	});
 
 	$("button.ajsample").click(function() {
-		$("div.ajsample").load("static/file/ajfile.txt");
+		$("div.ajsample").load("static/file/ajfile.txt [id]");
 	});
+
+	$("button.ajsample").click(function() {
+		$("div.ajsample").load("static/file/ajfile.txt [id]",function(responseTxt,statusTxt,xhr) {
+			if (statusTxt=="success") {
+				alert("load success\n"+"content:"+responseTxt+"\nstatus:"+statusTxt+"\nxhr:"+xhr.status+xhr.statusText);
+			}
+		});
+	});
+
+	$("button.get").click(function() {
+		$.get("static/file/ajfile.txt",function(data,status) {
+			alert("data:"+data+"\nstatus:"+status);	
+			});
+	});
+
+	$("button.post").click(function() {
+		$.post("/ajpost",{name:"pony",password:"love"},function(data,status)			 {
+				alert("data:"+data+"\nstatus:"+status);	
+			});
+	});
+
 
 
 

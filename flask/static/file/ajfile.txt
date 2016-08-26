@@ -1,1 +1,3 @@
-<p>hello this is ajax</p>
+<p class="recover">my class is recover</p>
+<p id="two">my id is two</p>
+<img id="three" src="static/css/images/flower.gif" />
