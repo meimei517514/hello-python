@@ -79,6 +79,10 @@ def ajsample():
 def ajpost():	
 	return "weclome %s,you password is %s,have a niceday"%(request.form["name"],request.form["password"])	
 
+@app.route("/treeview")
+def treeview():
+	return render_template("treeview.html")
+
 @app.route("/starter")
 def starter():
 	return render_template("starter.html")
