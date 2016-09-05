@@ -1,0 +1,8 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =6
+let g:netrw_dirhist_1='/home/weixiong/mygithub/hello-python/flask/templates'
+let g:netrw_dirhist_2='/home/weixiong/mygithub/hello-python/flask/static/css/images'
+let g:netrw_dirhist_3='/home/weixiong/mygithub/hello-python/flask/static/css'
+let g:netrw_dirhist_4='/home/weixiong/mygithub/hello-python/flask/templates/jqsample'
+let g:netrw_dirhist_5='/home/weixiong/mygithub/hello-python/flask/templates'
+let g:netrw_dirhist_6='/home/weixiong/.vim/bundle/Vundle.vim'

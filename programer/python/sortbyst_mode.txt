@@ -1,5 +1,6 @@
-('.filesumary.py.swp', 33188)
+('sqlite3test.db', 33188)
 ('textaccess.py', 33204)
+('sqlite3prac.py', 33204)
 ('filesumary.py', 33204)
 ('textsample.txt', 33204)
 ('sortbyst_mode.txt', 33204)

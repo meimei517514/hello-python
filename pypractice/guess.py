@@ -1,4 +1,4 @@
-# -*- coding: cp936 -*-
+#i -*- coding: cp936 -*-
 import random,time,copy,itertools,collections
 
 def random_num():

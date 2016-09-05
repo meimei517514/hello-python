@@ -6,6 +6,10 @@ print tuplea["a"]
 print tuplea["1"]
 print tuplea[1]
 
+print tuplea["a"][1]
+
+
+print "adfbex"[5:]
 class specialattr():
 	def __init__(self,value):
 		self.value=value
@@ -26,6 +30,7 @@ del newattr.opvalue
 print newattr.value,newattr.opvalue
 
 
+"""
 def closure_f(a,b):
 	def clo_re(x):
 		print a*x+b
@@ -212,15 +217,5 @@ print superList([1,2,3]) - superList([3,4])
 
 
 
+"""
 
-
-
-
-
-
-
-
-
-
-
-		

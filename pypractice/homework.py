@@ -1,4 +1,4 @@
-# -*- coding: gbk -*-
+# -*- coding: utf-8 -*-
 
 import os,time,datetime,re
 
@@ -68,9 +68,24 @@ def re_filename():
     datetime_str=datetime_real.strftime('%Y.%m.%d')
     print "文件改名后为%s.txt"%datetime_str
 
+def new_write_read():
+    with open("newhomework.txt","w") as files:
+        context=["tom,12,39","jim,13,40","terry,23,49"]
+
+        for i in context:
+            files.write(i)
+            files.write("\n")
+    with open("newhomework.txt","r") as files:
+        for i in files.readlines():
+            print i
+
+    
+
+
 
 
 if __name__=='__main__':
+    """" 
     tag_name=''
     person_record=[]
     need_update=False
@@ -81,3 +96,5 @@ if __name__=='__main__':
     update_file()
 
     re_filename()
+    """
+    new_write_read()

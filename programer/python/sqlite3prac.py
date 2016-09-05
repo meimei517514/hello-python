@@ -20,10 +20,10 @@ db_data.execute('''INSERT INTO human (id,name,sex,age) values(1,"Pony","man",28)
 print "insert new data to human"
 
 
-data=db_data.execute('''SELECT * FROM human''')
+selected=db_data.execute('''SELECT * FROM human''')
 
 
-for i in data:
+for i in selected:
 	print i
 
 
@@ -31,9 +31,9 @@ db_data.execute('''UPDATE human SET name="meimei" where id=1''')
 
 print "update human name"
 
-data=db_data.execute('''select name from human where id=1''')
+updated=db_data.execute('''select name from human where id=1''')
 
-print list(data)
+print list(updated)
 
 
 db_data.execute('''delete from human where id=1''')
